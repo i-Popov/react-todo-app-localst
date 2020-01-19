@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
-import ToDo from './containers/todo';
-import Title from './components/title/title';
+import ToDo from './containers/Todo/Todo';
+import Title from './components/Title/Title';
 
 const App = () => (
     <Fragment>

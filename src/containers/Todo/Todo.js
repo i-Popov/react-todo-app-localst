@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import ToDoInput from '../../components/todo-input/todo-input';
-import ToDoList from '../../components/todo-list/todo-list';
+import ToDoInput from '../../components/ToDoInput/ToDoInput';
+import ToDoList from '../../components/ToDoList/ToDoList';
 import Footer from '../../components/Footer/Footer';
 
 import './todo.css';
