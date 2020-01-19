@@ -1,9 +1,6 @@
-.todoitem {
-    font-size: 24px;
-    border-bottom: 1px solid #ededed;
+.todo__item {
+    font-size: 22px;
     min-height: 60px;
-    display: flex;
-    align-items: center;
     list-style: none;
     padding: 0 16px 0 60px;
     cursor: pointer;
@@ -11,10 +8,17 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    background-color: #ffff;
+    margin: 0 0 12px;
+    border-radius: 6px;
+
+    &:hover .icon_times {
+        color: rgba(175, 47, 47, 0.9);
+    }
 }
 
 .text {
-    font-family: 'Indie Flower', cursive;
+    color: #575757;
 }
 
 .completed {
@@ -22,11 +26,11 @@
 }
 
 .completed,
-.fa-check-circle {
+.icon_check_circle {
     color: #ccc;
 }
 
-.fa-times {
+.icon_times {
     transition: all .3s ease;
     color: rgba(175, 47, 47, 0.15);
 }
@@ -34,8 +38,4 @@
 .mark {
     position: absolute;
     left: 20px;
-}
-
-.todo-item:hover .fa-times {
-    color: rgba(175, 47, 47, 0.9);
 }

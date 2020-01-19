@@ -1,21 +1,25 @@
-.todoinputwrapper {
+.todo__input__wrapper {
     position: relative;
-    border-bottom: 1px solid #ededed;
+    margin: 0 0 15px;
 }
 
-.todoinput {
-    font-family: 'Indie Flower', cursive;
-    padding: 16px 16px 16px 60px;
+.todo__input {
+    padding: 16px;
     border: none;
-    background: rgba(0, 0, 0, 0.003);
+    background: #ffffff;
     width: 100%;
     box-sizing: border-box;
-    font-size: 28px;
-    font-style: italic;
-    box-shadow: inset 0 -2px 40px rgba(0,0,0,0.03);
+    font-size: 26px;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px 0 #999999;
+    outline: none;
+
+    &::placeholder {
+        color: #909090;
+    }
 }
 
-.faplus {
+.icon__wrapper {
     position: absolute;
     font-size: 24px;
     top: 50%;

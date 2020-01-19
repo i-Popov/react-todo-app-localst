@@ -15,10 +15,10 @@ const ToDoList = ({ tasksList }) => (
 
 ToDoList.propTypes = {
     tasksList: PropTypes.array,
-}
+};
 
 ToDoList.defaultProps = {
     tasksList: [],
-}
+};
 
 export default ToDoList;

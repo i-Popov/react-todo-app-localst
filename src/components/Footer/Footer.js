@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Footer.scss';
+import styles from './Footer.styles.scss';
 
 const FILTERS_BTN = [
     {
