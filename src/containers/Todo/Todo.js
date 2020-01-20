@@ -67,7 +67,7 @@ class ToDo extends Component {
 
         return (
             <div className={styles.todo__wrapper}>
-                <Title title="Задачи" />
+                <Title title="Tasks" />
                 <ToDoInput onKeyPress={this.AddTask} onChange={this.handleInputChange} value={taskText} />
                 {isTasksExist && <ToDoList CompleteTask={CompleteTask} tasksList={FilteredTasks} DeleteTask={DeleteTask} />}
                 {isTasksExist && <Footer ChangeFilter={ChangeFilter} amount={TaskCounter} activeFilter={Filters} />}

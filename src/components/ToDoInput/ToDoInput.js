@@ -8,7 +8,7 @@ const ToDoInput = ({ value, onChange, onKeyPress }) => (
         <i className={styles.icon__wrapper} />
         <input
             className={styles.todo__input}
-            placeholder="Введите задачу и нажмите 'Enter'"
+            placeholder="Please add task ..."
             onChange={onChange}
             value={value}
             onKeyPress={onKeyPress}
