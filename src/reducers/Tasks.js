@@ -1,5 +1,4 @@
-import { ADD_TASK } from "../constants";
-
+import { ADD_TASK, DELETE_TASK } from "../constants";
 
 const TASKS = [
     {
@@ -24,6 +23,10 @@ const Tasks = (state = TASKS, {id, text, isCompleted, type}) => {
     switch (type) {
         case ADD_TASK: {
             return [ ...state, {id, text, isCompleted} ];
+        }
+
+        case DELETE_TASK: {
+            return [...state].filter(task => task.id !== id);
         }
 
         default: {
