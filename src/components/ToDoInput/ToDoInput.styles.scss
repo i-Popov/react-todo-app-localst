@@ -11,7 +11,7 @@
     box-sizing: border-box;
     font-size: 26px;
     border-radius: 6px;
-    box-shadow: 0 2px 2px 0 #999999;
+    box-shadow: 0 2px 2px 0 #99999959;
     outline: none;
 
     &::placeholder {
@@ -26,17 +26,4 @@
     top: 50%;
     transform: translateY(-50%);
     left: 20px;
-}
-
-.todo-input::-webkit-input-placeholder {
-    font-family: 'Indie Flower', cursive;
-}
-.todo-input::-moz-placeholder {
-    font-family: 'Indie Flower', cursive;
-}
-.todo-input:-moz-placeholder {
-    font-family: 'Indie Flower', cursive;
-}
-.todo-input:-ms-input-placeholder {
-    font-family: 'Indie Flower', cursive;
 }

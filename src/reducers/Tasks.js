@@ -31,22 +31,10 @@ const Tasks = (state = TASKS.Tasks, {id, text, isCompleted, type}) => {
         // case EDIT_TASK: {
         //     return [...state].map(task => {
         //         if(task.id === id) {
-        //             task.value = id.value;
+        //             task.value = ;
         //         }
         //         return task;
         //     });
-        // }
-
-        // case EDIT_ITEM: {
-        //     const items = state.items.map(item => {
-        //         if (item.id === action.payload.modifiedItem.id) {
-        //             item.value = action.payload.modifiedItem.value;
-        //         }
-        //
-        //         return item;
-        //     });
-        //
-        //     return { ...state, items, editingItem: {} };
         // }
 
         default: {

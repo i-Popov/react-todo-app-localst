@@ -14,7 +14,6 @@ const ToDoItem = ({ text, isCompleted, DeleteTask, id, CompleteTask }) => (
             className={isCompleted ? 'mark icon_check_circle' : 'mark icon_circle'}
         />
         <span className={isCompleted ? 'completed' : 'text'}>{text}</span>
-        {/*<i onClick={() => EditTask(id)} className={styles.icon_times}>/</i>*/}
         <FontAwesomeIcon
             onClick={() => DeleteTask(id)}
             className={styles.icon_times} icon={faTrash}
@@ -26,7 +25,6 @@ ToDoItem.propTypes = {
     text: PropTypes.string,
     isCompleted: PropTypes.bool,
     DeleteTask: PropTypes.func,
-    //EditTask: PropTypes.func,
     id: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number,
@@ -37,7 +35,6 @@ ToDoItem.defaultProps = {
     text: '',
     isCompleted: false,
     DeleteTask: () => {},
-    //EditTask: () => {},
     id: '',
 };
 

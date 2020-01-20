@@ -7,7 +7,6 @@ import { AddTask } from "../../actions/AddTask";
 import { DeleteTask } from "../../actions/DeleteTask";
 import { CompleteTask } from "../../actions/CompleteTask";
 import { ChangeFilter } from "../../actions/ChangeFilter";
-//import { EditTask } from "../../actions/EditTask";
 
 import ToDoInput from '../../components/ToDoInput/ToDoInput';
 import ToDoList from '../../components/ToDoList/ToDoList';
@@ -48,11 +47,9 @@ class ToDo extends Component {
 
             case 'completed':
                 return Tasks.filter(Task => Task.isCompleted);
-                break;
 
             case 'active':
                 return Tasks.filter(Task => !Task.isCompleted);
-                break;
 
             default:
                 return Tasks;

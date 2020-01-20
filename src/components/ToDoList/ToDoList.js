@@ -17,14 +17,12 @@ ToDoList.propTypes = {
     tasksList: PropTypes.array,
     DeleteTask: PropTypes.func,
     CompleteTask: PropTypes.func,
-    // EditTask: PropTypes.func,
 };
 
 ToDoList.defaultProps = {
     tasksList: [],
     DeleteTask: () => {},
     CompleteTask: () => {},
-    // EditTask: () => {}
 };
 
 export default ToDoList;
