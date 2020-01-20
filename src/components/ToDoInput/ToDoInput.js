@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './ToDoInput.styles.scss';
 
 const ToDoInput = ({ value, onChange, onKeyPress }) => (
     <div className={styles.todo__input__wrapper}>
-        <i className={styles.icon__wrapper} />
+        <FontAwesomeIcon className={styles.icon__wrapper} icon={faPlus}/>
         <input
             className={styles.todo__input}
             placeholder="Please add task ..."

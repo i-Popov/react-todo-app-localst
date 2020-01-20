@@ -4,7 +4,7 @@
 }
 
 .todo__input {
-    padding: 16px;
+    padding: 16px 16px 16px 50px;
     border: none;
     background: #ffffff;
     width: 100%;
@@ -25,5 +25,6 @@
     font-size: 24px;
     top: 50%;
     transform: translateY(-50%);
-    left: 20px;
+    left: 16px;
+    color: #949494;
 }
