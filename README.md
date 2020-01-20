@@ -1,8 +1,6 @@
 
-### `npm start`
-
-### `npm test`
+### `npm install`
 
 ### `npm run build`
 
-### `npm run eject`
+### `npm start`
