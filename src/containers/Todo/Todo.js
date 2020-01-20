@@ -45,29 +45,35 @@ class ToDo extends Component {
 
     FilterTasks = (Tasks, activeFilter) => {
         switch (activeFilter) {
+
             case 'completed':
                 return Tasks.filter(Task => Task.isCompleted);
                 break;
+
             case 'active':
                 return Tasks.filter(Task => !Task.isCompleted);
                 break;
+
             default:
                 return Tasks;
         }
     };
+
+    getActiveTasksCounter = Tasks => Tasks.filter(Task => !Task.isCompleted).length;
 
     render() {
         const { taskText } = this.state;
         const { Tasks, DeleteTask, CompleteTask, Filters, ChangeFilter } = this.props;
         const isTasksExist = Tasks && Tasks.length > 0;
         const FilteredTasks = this.FilterTasks(Tasks, Filters);
+        const TaskCounter = this.getActiveTasksCounter(Tasks);
 
         return (
             <div className={styles.todo__wrapper}>
                 <Title title="Задачи" />
                 <ToDoInput onKeyPress={this.AddTask} onChange={this.handleInputChange} value={taskText} />
                 {isTasksExist && <ToDoList CompleteTask={CompleteTask} tasksList={FilteredTasks} DeleteTask={DeleteTask} />}
-                {isTasksExist && <Footer ChangeFilter={ChangeFilter} amount={Tasks.length} activeFilter={Filters} />}
+                {isTasksExist && <Footer ChangeFilter={ChangeFilter} amount={TaskCounter} activeFilter={Filters} />}
             </div>
         );
     }

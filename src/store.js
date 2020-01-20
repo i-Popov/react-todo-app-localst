@@ -1,5 +1,6 @@
-import { createStore, compose } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
 import AppReducer from './reducers/index';
+import { save } from 'redux-localstorage-simple'
 
 /* eslint-disable no-underscore-dangle */
 const composeEnhancers =
@@ -13,7 +14,9 @@ const configureStore = preloadedState => (
     createStore(
         AppReducer,
         preloadedState,
-        composeEnhancers(),
+        composeEnhancers(
+            applyMiddleware(save({namespace: 'react-todo-app' }))
+        ),
     )
 );
 
