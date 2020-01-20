@@ -1,14 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircle, faCheckCircle, faTrash } from '@fortawesome/free-solid-svg-icons'
+
 
 import styles from './ToDoItem.styles.scss';
 
 const ToDoItem = ({ text, isCompleted, DeleteTask, id, CompleteTask }) => (
     <li className={styles.todo__item}>
-        <i onClick={() => CompleteTask(id)} className={isCompleted ? 'mark far icon_check_circle' : 'mark far icon_circle'}>o</i>
+        <FontAwesomeIcon
+            onClick={() => CompleteTask(id)}
+            icon={isCompleted ? faCheckCircle : faCircle}
+            className={isCompleted ? 'mark icon_check_circle' : 'mark icon_circle'}
+        />
         <span className={isCompleted ? 'completed' : 'text'}>{text}</span>
         {/*<i onClick={() => EditTask(id)} className={styles.icon_times}>/</i>*/}
-        <i onClick={() => DeleteTask(id)} className={styles.icon_times}>x</i>
+        <FontAwesomeIcon
+            onClick={() => DeleteTask(id)}
+            className={styles.icon_times} icon={faTrash}
+        />
     </li>
 );
 
